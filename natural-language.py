@@ -10,13 +10,12 @@ service = NaturalLanguageUnderstandingV1(
 service.set_service_url('{url}}')
 
 
-
 response = service.analyze(
-text='Who is the president of Brazil?',
-features=Features(
-    concepts=ConceptsOptions(),
-    emotion=EmotionOptions(),
-    entties=EntitiesOptions(),
+    text='Who is the president of Brazil?',
+    features=Features(
+        concepts=ConceptsOptions(),
+        emotion=EmotionOptions(),
+        entities=EntitiesOptions(),
         sentiment=SentimentOptions(),
     ))
 

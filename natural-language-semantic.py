@@ -10,33 +10,15 @@ service = NaturalLanguageUnderstandingV1(
 service.set_service_url('{url}}')
 
 
-def nlp1():
-
-    response = service.analyze(
+response = service.analyze(
     text='Who is the president of Brazil?',
     features=Features(
         concepts=ConceptsOptions(),
         emotion=EmotionOptions(),
         entities=EntitiesOptions(),
         sentiment=SentimentOptions(),
-        ))
-
-    print(json.dumps(response.result, indent=2))
-
-
-def nlp2():
-
-    response = service.analyze(
-    text='Steve Jobs is the founder of Apple',
-    features=Features(
-        entities=EntitiesOptions(),
-        semantic_roles=SemanticRolesOptions(),
     ))
 
-    print(json.dumps(response.result, indent=2))
 
-
-if __name__ == "__main__":
-    
-    nlp2()
+print(json.dumps(response.result, indent=2))
 
