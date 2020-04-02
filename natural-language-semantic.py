@@ -7,7 +7,7 @@ authenticator = IAMAuthenticator('{apikey}')
 service = NaturalLanguageUnderstandingV1(
     version='2020-03-31',
     authenticator=authenticator)
-service.set_service_url('{url}}')
+service.set_service_url('{url}')
 
 
 response = service.analyze(
